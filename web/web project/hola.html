@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sticky Footer Example</title>
+  
+</head>
+<style>
+  html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Wrapper uses flex to push footer down */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main content grows to fill space */
+.content {
+  flex: 1;
+}
+.main-content {
+  text-align: right;
+  font-size: 24px;
+  
+  background-color: #222;
+  color: white;
+  padding: 20px;
+
+}
+
+/* Footer styling */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+</style>
+<body>
+  <div class="wrapper">
+    <main class="content">
+      <h1>Welcome</h1>
+      <p class="main-content">This is the main content.</p>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Your Site</p>
+    </footer>
+  </div>
+</body>
+</html>
