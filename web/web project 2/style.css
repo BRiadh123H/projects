@@ -1,0 +1,167 @@
+<style>
+
+form {
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 50px;
+    max-width: 500px;
+    margin: 30px auto;   /* centers the form */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    text-align: left; /* keeps form labels aligned properly */
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    
+}
+a {
+    color: #0066cc;
+    font-size: 22px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+button[type="submit"] {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #155ec2;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    background-color: #e8f0fe; /* soft light blue */
+    color: #222;
+    padding: 20px;
+}
+.center-wrapper {
+    max-width: 900px;             /* Prevents stretching */
+    margin: 0 auto;               /* Centers horizontally */
+    text-align: center;           /* Centers text */
+}
+ul {
+    list-style-position: inside; /* keeps bullets aligned */
+    padding: 0;
+    text-align: center;
+}
+
+/* Center ordered lists (1. 2. 3.) */
+ol {
+    list-style-position: inside;
+    padding: 0;
+    text-align: center;
+}
+
+/* Center the table and make it look cleaner */
+table {
+    margin: 0 auto;           /* centers table */
+    border-collapse: collapse;
+}
+
+table th, table td {
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    background-color: #1a73e8; /* Google-blue shade */
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    margin: 25px 0;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h2 {
+    color: #1a73e8;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a73e8;
+    color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+    .card-container {
+    display: flex;           /* make children align in a row */
+    justify-content: space-between; /* space between cards */
+    flex-wrap: wrap;         /* wrap to next line on small screens */
+    gap: 20px;               /* space between cards */
+}
+
+
+
+}
+
+.card-container {
+    display: flex;           /* make children align in a row */
+    justify-content: space-between; /* space between cards */
+    flex-wrap: wrap;         /* wrap to next line on small screens */
+    gap: 20px;               /* space between cards */
+}
+
+.card {
+    background-color: #f1f3f4;
+    padding: 20px;
+    border-radius: 12px;
+    flex: 1 1 calc(30% - 20px); /* flexible width, roughly 3 per row */
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    min-width: 200px;        /* ensures it doesn’t get too small */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.grid-item {
+    background-color: #f1f3f4;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+
+</style>
