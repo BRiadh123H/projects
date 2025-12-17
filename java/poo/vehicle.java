@@ -1,19 +1,21 @@
-package poo1;
+package poo;
 
 public abstract class vehicle {
-    String marque;
-    String modele;
-    int annee;
+    protected String marque;
+    protected String modele;
+    protected int annee;
+
     private int vitesse;
     
     public int getVitesse() {
         return vitesse;
     }
     
-    public void setVitesse(int vitesse) {
-        if (vitesse >= 0) {
-            this.vitesse = vitesse;
+    public void setVitesse(int vitesse) throws invalidspeedexception { 
+        if (vitesse <0){
+            throw new invalidspeedexception("La vitesse ne peut pas être négative !");
         }
+        this.vitesse = vitesse;
     }
     
     public vehicle() {

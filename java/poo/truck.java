@@ -1,6 +1,6 @@
-package poo1;
+package poo;
 
-public class truck extends vehicle {
+public class truck extends vehicle implements reparable {
     int capaciteCharge;
 
     public truck() {
@@ -12,7 +12,11 @@ public class truck extends vehicle {
         super(marque, modele, annee);
         this.capaciteCharge = capaciteCharge;
     }
+    public void repare() {
+    System.out.println("Réparation du camion " + marque);
+}
 
+    
     
     
     void demarrer() {

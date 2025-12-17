@@ -1,4 +1,4 @@
-package poo1;
+package poo;
 
 public class car extends vehicle {
     public car() {
@@ -13,6 +13,7 @@ public class car extends vehicle {
         System.out.println("La voiture " + marque + " démarre.");
     }
 
+    @Override // Ajout de l'annotation
     void afficherInfos() {
         System.out.println("Voiture " + marque + " roule à " + getVitesse() + " km/h");
     }
