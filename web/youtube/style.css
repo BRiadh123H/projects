@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* COLORS */
+:root {
+  --bg: #ffffff;
+  --light: #f9f9f9;
+  --text: #0f0f0f;
+  --muted: #606060;
+  --border: #e5e5e5;
+}
+
+/* TOP BAR */
+.topbar {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  background: var(--bg);
+  z-index: 100;
+}
+
+.top-left,
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* SEARCH */
+.search {
+  display: flex;
+  align-items: center;
+  width: 520px;
+  max-width: 100%;
+}
+
+.search input {
+  flex: 1;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 999px 0 0 999px;
+  border: 1px solid var(--border);
+  outline: none;
+  font-size: 15px;
+}
+
+.search button {
+  height: 40px;
+  width: 56px;
+  border-radius: 0 999px 999px 0;
+  border: 1px solid var(--border);
+  background: var(--light);
+  cursor: pointer;
+}
+
+/* LAYOUT */
+.layout {
+  display: flex;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 240px;
+  padding: 12px;
+}
+
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--text);
+}
+
+.sidebar a:hover {
+  background: var(--light);
+}
+
+.sidebar .active {
+  background: var(--light);
+  font-weight: 500;
+}
+
+/* CONTENT GRID */
+.content {
+  flex: 1;
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* VIDEO CARD */
+.card {
+  cursor: pointer;
+}
+
+.thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #ddd;
+  border-radius: 16px;
+  margin-bottom: 12px;
+}
+
+.info {
+  display: flex;
+  gap: 12px;
+}
+
+.channel-pic {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #bbb;
+}
+
+.card h4 {
+  font-size: 15px;
+  line-height: 1.3;
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.card span {
+  font-size: 12px;
+  color: var(--muted);
+}
+
