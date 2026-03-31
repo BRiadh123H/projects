@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="cabinet.ui.DashboardController">
+            
+    <VBox spacing="0">
+        <!-- Scrollable Top bar -->
+        <HBox styleClass="topbar" alignment="CENTER_LEFT" spacing="20">
+            <VBox>
+                <Label text="Cabinet Médical" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #1e293b;"/>
+                <Label text="Dr. Management Suite" style="-fx-text-fill: #94a3b8; -fx-font-size: 11px;"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="welcomeLabel" text="Welcome, Dr. Admin" style="-fx-text-fill: #64748b; -fx-font-weight: bold;"/>
+        </HBox>
+
+        <!-- Main Content (Now part of the main VBox) -->
+        <VBox spacing="30" style="-fx-padding:30 40;">
+
+            <!-- Stats Cards Section -->
+            <HBox spacing="25" styleClass="stats-container">
+                
+                <VBox styleClass="card, card-blue">
+                    <Label text="Total Patients" styleClass="card-title"/>
+                    <Label fx:id="patientCountLabel" text="0" styleClass="card-number"/>
+                </VBox>
+
+                <VBox styleClass="card, card-green">
+                    <Label text="Today's Appointments" styleClass="card-title"/>
+                    <Label fx:id="todayApptLabel" text="0" styleClass="card-number"/>
+                </VBox>
+
+                <VBox styleClass="card, card-orange">
+                    <Label text="Revenue (DA)" styleClass="card-title"/>
+                    <Label fx:id="revenueLabel" text="0" styleClass="card-number"/>
+                </VBox>
+
+                <VBox styleClass="card, card-red">
+                    <Label text="Total Debt (DA)" styleClass="card-title"/>
+                    <Label fx:id="debtLabel" text="0" styleClass="card-number"/>
+                </VBox>
+
+            </HBox>
+
+            <!-- Search and Main Area -->
+            <VBox spacing="20">
+                <HBox alignment="CENTER_LEFT" spacing="15">
+                    <Label text="Patient Search" styleClass="section-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <TextField fx:id="searchField" promptText="Search by name or phone..." prefWidth="350" styleClass="search-field"/>
+                </HBox>
+
+                <HBox spacing="30" VBox.vgrow="ALWAYS">
+                    <!-- Left: Patient List -->
+                    <VBox spacing="10" HBox.hgrow="ALWAYS">
+                        <Label text="Recent Patients" style="-fx-text-fill: #94a3b8; -fx-font-size: 13px; -fx-font-weight: bold;"/>
+                        <TableView fx:id="patientTable" VBox.vgrow="ALWAYS" prefHeight="400">
+                            <columns>
+                                <TableColumn fx:id="colFirstName" text="First Name" prefWidth="150"/>
+                                <TableColumn fx:id="colLastName" text="Last Name" prefWidth="150"/>
+                                <TableColumn fx:id="colPhone" text="Phone Number" prefWidth="150"/>
+                                <TableColumn fx:id="colPaid" text="Paid Amount (DA)" prefWidth="140"/>
+                                <TableColumn fx:id="colRemaining" text="Remaining (DA)" prefWidth="140"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+
+                    <!-- Right: Visit History / Appointments -->
+                    <VBox spacing="10" prefWidth="400">
+                        <Label text="Patient Sessions / Visits" style="-fx-text-fill: #94a3b8; -fx-font-size: 13px; -fx-font-weight: bold;"/>
+                        <TableView fx:id="appointmentTable" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="colDate" text="Date &amp; Time" prefWidth="160"/>
+                                <TableColumn fx:id="colReason" text="Treatment / Reason" prefWidth="220"/>
+                            </columns>
+                            <placeholder>
+                                <Label text="Select a patient to view visit history"/>
+                            </placeholder>
+                        </TableView>
+                    </VBox>
+                </HBox>
+            </VBox>
+
+        </VBox>
+
+        <!-- Scrollable Footer -->
+        <HBox styleClass="footer" alignment="CENTER_LEFT" spacing="20">
+            <Label text="Cabinet Médical Management System v1.1" styleClass="footer-text"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="Sign Out" fx:id="logoutButton" styleClass="menu-button, logout-btn"/>
+        </HBox>
+    </VBox>
+</ScrollPane>

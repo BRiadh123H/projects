@@ -1,0 +1,18 @@
+# Java compiled files
+*.class
+out/
+
+# IDE settings
+.idea/
+*.iml
+
+# Environment variables
+.env
+config.properties
+
+# JavaFX SDK (if included in the repo)
+javafx-sdk-*/
+
+# OS generated files
+.DS_Store
+Thumbs.db

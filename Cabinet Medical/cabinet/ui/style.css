@@ -1,0 +1,187 @@
+.root{
+    -fx-font-family: "Segoe UI Semibold", "Segoe UI", sans-serif;
+    -fx-background-color: #f8fafc; /* Very light slate */
+}
+
+/* Footer Bar */
+.footer {
+    -fx-background-color: #1e293b; /* Deep slate - same as former sidebar */
+    -fx-padding: 15 40;
+    -fx-pref-height: 60;
+    -fx-border-color: #334155;
+    -fx-border-width: 1 0 0 0;
+}
+
+.footer-text {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 12px;
+}
+
+.logout-btn {
+    -fx-text-fill: #fca5a5 !important;
+    -fx-font-weight: bold;
+}
+
+.logout-btn:hover {
+    -fx-background-color: #7f1d1d !important;
+    -fx-text-fill: white !important;
+}
+
+.logo-vbox {
+    -fx-padding: 0 0 40 10;
+}
+
+.logo{
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.logo-subtitle {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 12px;
+}
+
+/* Menu */
+.menu-button{
+    -fx-background-color: transparent;
+    -fx-text-fill: #cbd5e1;
+    -fx-font-size: 15px;
+    -fx-pref-width: 220;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 12 20;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+    -fx-transition: 0.3s;
+}
+
+.menu-button:hover{
+    -fx-background-color: #334155;
+    -fx-text-fill: white;
+}
+
+.menu-button-active {
+    -fx-background-color: #3b82f6; /* Modern Blue */
+    -fx-text-fill: white;
+}
+
+.logout-button {
+    -fx-margin-top: 50;
+    -fx-text-fill: #fca5a5;
+}
+
+.logout-button:hover {
+    -fx-background-color: #7f1d1d;
+    -fx-text-fill: white;
+}
+
+/* Top bar */
+.topbar{
+    -fx-background-color: white;
+    -fx-padding: 20 40;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 1 0;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.02), 5, 0, 0, 2);
+}
+
+.title{
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+
+/* Cards Area */
+.stats-container {
+    -fx-padding: 10 0 10 0;
+}
+
+.card{
+    -fx-background-color: white;
+    -fx-padding: 25;
+    -fx-background-radius: 16;
+    -fx-pref-width: 240;
+    -fx-spacing: 8;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.04), 15, 0, 0, 10);
+}
+
+.card-title {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 13px;
+    -fx-text-transform: uppercase;
+    -fx-letter-spacing: 0.5px;
+}
+
+.card-number{
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+
+.card-blue { -fx-border-color: #dbeafe; -fx-background-color: linear-gradient(to bottom, #ffffff, #f0f7ff); }
+.card-green { -fx-border-color: #dcfce7; -fx-background-color: linear-gradient(to bottom, #ffffff, #f0fdf4); }
+.card-orange { -fx-border-color: #ffedd5; -fx-background-color: linear-gradient(to bottom, #ffffff, #fff7ed); }
+.card-red { -fx-border-color: #fee2e2; -fx-background-color: linear-gradient(to bottom, #ffffff, #fef2f2); }
+
+/* Main Section Titles */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #334155;
+    -fx-padding: 10 0 5 0;
+}
+
+/* Table View */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 12;
+    -fx-padding: 5;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 12 5;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #64748b;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #f8fafc;
+    -fx-border-width: 0 0 1 0;
+    -fx-cell-size: 50px;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #ef4444; /* Modern Red */
+    -fx-text-fill: white;
+}
+
+.table-view .placeholder .label {
+    -fx-text-fill: #94a3b8;
+    -fx-font-style: italic;
+}
+
+/* Search Field */
+.search-field {
+    -fx-background-color: white;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 20;
+    -fx-background-radius: 20;
+    -fx-padding: 10 20;
+    -fx-font-size: 14px;
+}
+
+.search-field:focused {
+    -fx-border-color: #3b82f6;
+    -fx-effect: dropshadow(three-pass-box, rgba(59,130,246,0.1), 10, 0, 0, 0);
+}

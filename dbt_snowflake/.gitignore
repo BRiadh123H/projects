@@ -1,0 +1,18 @@
+# dbt-specific
+snowflake_data/target/
+snowflake_data/dbt_packages/
+snowflake_data/logs/
+
+# Profiles (never commit these)
+profiles.yml
+*.yml.sample
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Credentials (just in case)
+a.txt
+credentials.json
+.env
+secret.txt
